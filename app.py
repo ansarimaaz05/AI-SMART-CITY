@@ -54,10 +54,7 @@ if not st.session_state.logged_in:
         login_btn = st.form_submit_button("Login")
         if login_btn:
             valid_users = {
-                "maaz@gmail.com": "maaz@123",
-                "harish@gmail.com": "harish@123",
-                "vvek@gmai.com": "vvek@123",
-                "sulaim@gmail.com": "sulaim@123",
+                "user@gmail.com": "user@123"
             }
             if username in valid_users and password == valid_users[username]:
                 st.session_state.logged_in = True
@@ -237,3 +234,4 @@ with tab3:
         st.dataframe(feedback_df)
     else:
         st.info("No feedback available yet.")
+
