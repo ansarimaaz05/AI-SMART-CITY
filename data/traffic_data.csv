@@ -1,0 +1,57 @@
+city_ascii,admin_name,lat,lng,population,traffic_index
+Mumbai,Maharashtra,19.0760,72.8777,12442373,82
+Pune,Maharashtra,18.5204,73.8567,3124458,65
+Nagpur,Maharashtra,21.1458,79.0882,2405665,58
+Nashik,Maharashtra,19.9975,73.7898,1486053,50
+Aurangabad,Maharashtra,19.8762,75.3433,1175116,55
+Solapur,Maharashtra,17.6599,75.9064,951118,48
+Amravati,Maharashtra,20.9333,77.7510,646801,45
+Kolhapur,Maharashtra,16.7050,74.2433,561841,46
+Sangli,Maharashtra,16.8524,74.5815,502697,44
+Jalgaon,Maharashtra,21.0100,75.5680,460468,42
+Akola,Maharashtra,20.7096,77.0082,425817,41
+Latur,Maharashtra,18.4088,76.5604,382754,40
+Dhule,Maharashtra,20.9025,74.7774,376093,39
+Delhi,Delhi,28.7041,77.1025,11034555,88
+Bengaluru,Karnataka,12.9716,77.5946,8436675,79
+Chennai,Tamil Nadu,13.0827,80.2707,7090000,72
+Hyderabad,Telangana,17.3850,78.4867,6809970,74
+Kolkata,West Bengal,22.5726,88.3639,4486679,70
+Ahmedabad,Gujarat,23.0225,72.5714,5570585,68
+Surat,Gujarat,21.1702,72.8311,4462002,67
+Vadodara,Gujarat,22.3072,73.1812,2065771,60
+Jaipur,Rajasthan,26.9124,75.7873,3073350,60
+Lucknow,Uttar Pradesh,26.8467,80.9462,3382000,62
+Kanpur,Uttar Pradesh,26.4499,80.3319,2768057,59
+Patna,Bihar,25.5941,85.1376,1684222,57
+Bhopal,Madhya Pradesh,23.2599,77.4126,1798218,54
+Indore,Madhya Pradesh,22.7196,75.8577,1964086,56
+# --- Delhi ---
+Delhi,Delhi,28.7041,77.1025,11034555,88
+New Delhi,Delhi,28.6139,77.2090,142004,85
+Dwarka,Delhi,28.5733,77.0125,1100000,75
+Rohini,Delhi,28.7350,77.1130,860000,72
+Saket,Delhi,28.5222,77.2167,300000,65
+
+# --- Karnataka ---
+Bengaluru,Karnataka,12.9716,77.5946,8436675,79
+Mysuru,Karnataka,12.2958,76.6394,893062,62
+Mangaluru,Karnataka,12.9141,74.8560,623841,58
+Hubballi,Karnataka,15.3647,75.1240,943788,55
+Belagavi,Karnataka,15.8497,74.4977,488157,54
+Shivamogga,Karnataka,13.9299,75.5681,322650,50
+
+# --- Telangana ---
+Hyderabad,Telangana,17.3850,78.4867,6809970,74
+Warangal,Telangana,17.9784,79.5941,829335,60
+Nizamabad,Telangana,18.6725,78.0941,311152,55
+Karimnagar,Telangana,18.4386,79.1288,305500,52
+Khammam,Telangana,17.2473,80.1514,313504,50
+
+# --- Gujarat ---
+Ahmedabad,Gujarat,23.0225,72.5714,5570585,68
+Surat,Gujarat,21.1702,72.8311,4462002,67
+Vadodara,Gujarat,22.3072,73.1812,2065771,60
+Rajkot,Gujarat,22.3039,70.8022,1506000,58
+Bhavnagar,Gujarat,21.7645,72.1519,605882,55
+Junagadh,Gujarat,21.5222,70.4579,360000,50
