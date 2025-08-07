@@ -3,10 +3,8 @@ import pandas as pd
 import pydeck as pdk
 from utils.feedback_analyzer import analyze_feedback
 
-# --- PAGE CONFIG ---
 st.set_page_config(page_title="AI Smart City", layout="wide")
 
-# --- THEME STYLING ---
 st.markdown("""
     <style>
         .stApp {
@@ -41,7 +39,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- LOGIN PAGE ---
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
     st.session_state.username = ""
@@ -65,7 +62,6 @@ if not st.session_state.logged_in:
                 st.error("❌ Invalid credentials. Please try again.")
     st.stop()
 
-# --- MAIN APP ---
 st.title("🌿 AI Smart City Dashboard")
 
 if st.button("🔒 Logout"):
@@ -73,7 +69,6 @@ if st.button("🔒 Logout"):
     st.session_state.username = ""
     st.rerun()
 
-# --- Load Data ---
 try:
     traffic_df = pd.read_csv("data/city_data.csv")
     pollution_df = pd.read_csv("data/air_quality_data.csv")
@@ -82,7 +77,6 @@ try:
     if "location" in city_df.columns:
         city_df.drop(columns=["location"], inplace=True)
 
-    # Always rename lng to lon for pydeck
     if "lng" in city_df.columns:
         city_df.rename(columns={"lng": "lon"}, inplace=True)
 
@@ -101,10 +95,8 @@ try:
 except:
     feedback_df = pd.DataFrame()
 
-# --- Tabs ---
 tab1, tab2, tab3 = st.tabs(["🚦 Traffic & Mobility", "🌫 Air Quality", "🗣 Citizen Feedback"])
 
-# --- TAB 1: Traffic & Pollution Map ---
 with tab1:
     st.markdown("### 🚦 Traffic & Pollution Map")
 
@@ -120,7 +112,6 @@ with tab1:
         if not state_data.empty:
             st.dataframe(state_data[['city_ascii','admin_name','population','traffic_index','pm25']])
 
-            # --- Keep map state persistent ---
             if "show_map" not in st.session_state:
                 st.session_state.show_map = False
 
@@ -162,7 +153,7 @@ with tab1:
                             get_fill_color="color",
                             pickable=True,
                         )
-                    else:  # Dot Map
+                    else:
                         layer = pdk.Layer(
                             "ScatterplotLayer",
                             data=state_data,
@@ -192,7 +183,6 @@ with tab1:
     else:
         st.warning("⚠️ No traffic data available.")
 
-# --- TAB 2: Air Quality ---
 with tab2:
     st.markdown("### 🌫 Air Quality Data & Graphs")
 
@@ -215,7 +205,6 @@ with tab2:
     else:
         st.warning("⚠️ Air quality data not available.")
 
-# --- TAB 3: Feedback ---
 with tab3:
     st.markdown("### 📬 Submit Feedback")
     feedback = st.text_area("Enter feedback or complaint:")
@@ -234,4 +223,3 @@ with tab3:
         st.dataframe(feedback_df)
     else:
         st.info("No feedback available yet.")
-
